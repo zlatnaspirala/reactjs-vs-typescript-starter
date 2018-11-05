@@ -1,0 +1,13 @@
+.menuItem {
+  display: "block";
+  background: "#412126";
+  height: "60px";
+  width: "100%";
+  text-align: "center";
+  color: "initial";
+}
+
+.menuItem:hover { 
+  background-color: rgb(0, 0, 0);
+  color: aqua;
+}

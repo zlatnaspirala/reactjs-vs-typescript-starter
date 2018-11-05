@@ -1,0 +1,72 @@
+
+ /** The animation code example
+ * css3
+ */
+
+@keyframes FadeRedYellow {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+@keyframes FadeSilver {
+  from {background-color: black;}
+  to {background-color: silver;}
+}
+
+@keyframes FadeBlack {
+  from {background-color: silver;}
+  to {background-color: black;}
+}
+
+/* Standard syntax */
+@keyframes colorFun {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: yellowgreen;}
+  100% {background-color: lightsalmon;}
+}
+
+@keyframes fromTopToBottom {
+  0%   {background-color:red; bottom:100%;}
+  25%  {background-color:yellow; bottom:85%;}
+  50%  {background-color:blue; bottom:50%;}
+  75%  {background-color:green;bottom:25%;}
+  100% {background-color:red; bottom:5px;}
+}
+
+ /** 
+ * Optimise for safari
+ */
+
+ /* Safari 4.0 - 8.0 */
+
+ @-webkit-keyframes fromTopToBottom {
+  0%   {background-color:red; bottom:100%;}
+  15%  {background-color:yellow; bottom:85%;}
+  25%  {background-color:yellow; bottom:80%;}
+  50%  {background-color:blue; bottom:50%;}
+  75%  {background-color:green;bottom:25%;}
+  100% {background-color:red; bottom:inherit;}
+}
+
+@-webkit-keyframes colorFun {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: yellowgreen;}
+  100% {background-color: lightsalmon;}
+}
+
+@-webkit-keyframes FadeRedYellow {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+@-webkit-keyframes FadeSilver {
+  from {background-color: black;}
+  to {background-color: silver;}
+}
+
+@-webkit-keyframes FadeBlack {
+  from {background-color: silver;}
+  to {background-color: black;}
+}

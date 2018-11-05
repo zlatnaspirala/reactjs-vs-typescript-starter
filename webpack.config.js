@@ -14,16 +14,18 @@ plugins.push(new HtmlWebpackPlugin({
 
 plugins.push(new ExtractTextPlugin({
   filename: (getPath) => {
-      return getPath('css/style.css');
+      return getPath('./css/global-style.css');
   },
   allChunks: true
 }));
 
+var publicPath = "build";
+ 
 var config = {
   mode: 'development',
   entry: ["./src/index.tsx"],
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, publicPath),
     filename: "bundle.js"
   },
   resolve: {
@@ -43,7 +45,7 @@ var config = {
         {
             test: /\.html$/,
             use: ['html-loader']
-        },
+        },   
         {
             test: /\.css$/,
             use: ExtractTextPlugin.extract({
@@ -57,22 +59,15 @@ var config = {
                     }
                 ]
             })
-        },
+        } ,
         {
             test: /\.(gif|png|jpe?g|svg)$/i,
             use: [
                 {
                     loader: 'file-loader',
                     options: {
-                        name(file) {
-                            // create correct path within dist/ folder
-                            var gamesPath = customConfig['gamesPath'];
-                            result = file.replace(__dirname + gamesPath, '');
-                            return result;
-                        },
-                        publicPath(file) {
-                            return customConfig['baseUrl'] + file;
-                        }
+                        name: '[path][name].[ext]',
+                        outputPath: publicPath + '/assets/images'
                     }
                 }
             ]

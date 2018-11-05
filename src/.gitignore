@@ -1,0 +1,10 @@
+
+*.code-workspace
+node_modules/
+build/bundle.js
+build/index.html
+src/.DS_Store
+src/components/.DS_Store
+build/.DS_Store
+.DS_Store
+.DS_Store
