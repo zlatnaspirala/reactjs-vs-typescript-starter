@@ -267,7 +267,7 @@ switch (event._targetInst.key) {
   ];
  ```
 
-Becouse we read data from array access is easy and fast:
+Because we read data from array access is easy and fast:
 
 ```js
    // Class Body
