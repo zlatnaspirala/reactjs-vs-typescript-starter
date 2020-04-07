@@ -253,7 +253,7 @@ switch (event._targetInst.key) {
 ```diff
 - In body class we insert new element in section not direct in parent class.
 - You can't edit or access this.state from outside of class
-- You can edit this.props in own class
+- You can't edit this.props in own class
 ```
 
  MyTableData is simple object imported from data-structures/text-data.ts and looks like : 
